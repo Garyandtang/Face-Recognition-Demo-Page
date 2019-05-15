@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FYP Demo</title>
+    <!-- <input type="file" id="file" name="" />
+    <div id="image" style="width:390px;height:280px; background:#CCCCCC; float:left;">
+    <img src="__PUBLIC__/images/tu.png" />
+    </div> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/superslides.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
+
+    <!--<link href="css/superslides.css" rel="stylesheet">-->
+
+	<!--<link href="css/owl.carousel.min.css" rel="stylesheet">-->
+
+	<!--<link href="css/owl.theme.default.min.css" rel="stylesheet">-->
+    <!--<link href="css/styles.css" rel="stylesheet">-->
+</head>
+<body>
+<div class="loader">
+        <div class="inner"></div>
+    </div>
+
+   <div id="about" class="section about">
+        <div class="container aboutText">
+            <div class="row">
+
+                <div class="col-md-6 aboutImgContainer">
+                    <img class="aboutImg2" src="../static/imgs/logos/PolyU.svg">
+                </div>
+                <div class="col-md-6 aboutImgContainer">
+                    <img class="aboutImg" src="../static/imgs/logos/eie.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="education" class="contactSection section">
+        <div class="container">
+            <form id ="upload-file" method="post" enctype="multipart/form-data">
+            <div class="row">
+                  <!--<div class="col-md-12 text-center educationHeader">-->
+                <!--&lt;!&ndash; <input type="file" id="file" name="" /> &ndash;&gt;-->
+
+                <!--<div class="col-md-2" id="11" style=" float:center;">-->
+                    <!--<img src=https://upload.wikimedia.org/wikipedia/en/5/52/PolyU.svg class="fa-li fa" style="width:6.0em;">-->
+                <!--</div>-->
+                <!--<div class="col-md-8" id="22" style=" float:center;">-->
+                    <!--<h2>Low Resolution Face Recognition</h2>-->
+                    <!--&lt;!&ndash;<img class="aboutImg" src="./imgs/portfolio/bright_building_description.png">&ndash;&gt;-->
+                    <!--<h3>Tang Jiawei</h3>-->
+                <!--</div>-->
+                <!--<div class="col-md-2" id="33" style=" float:center;">-->
+                    <!--<img src=https://upload.wikimedia.org/wikipedia/en/5/52/PolyU.svg class="fa-li fa" style="width:6.0em;">-->
+                <!--</div>-->
+
+                <!--</div>-->
+                <div class="col-md-12 text-center educationHeader">
+                    <!--<div class="col-sm-12 col-md-1">&emsp;&emsp;<img src=https://upload.wikimedia.org/wikipedia/en/5/52/PolyU.svg class="fa-li fa" style="width:10.0em;"></div>-->
+                    <!--<div class="col-sm-12 col-md-10">-->
+                    <!--</div>-->
+
+                    <h2>Low Resolution Face Recognition</h2>
+                    <!--<img class="aboutImg" src="./imgs/portfolio/bright_building_description.png">-->
+                    <h3>Tang Jiawei</h3>
+
+                </div>
+                <div class="col-md-12 text-center educationHeader">
+                <!-- <input type="file" id="file" name="" /> -->
+
+                <div class="col-md-4" id="image" style=" float:left;">
+                    <img class="aboutImg" id="imageArea" src={{input_face1}} />
+
+                    <input type="file" id="file" name="file1" value={{input_face_path}} style=" float:left;"/>
+                </div>
+
+                <div class="col-md-2" id="aligned_image1" style=" float:left;">
+                    <img class="aboutImg" src={{aligned_face1}} />
+                </div>
+                <div class="col-md-2" id="aligned_imamge2" style=" float:left;">
+                    <img class="aboutImg" src={{aligned_face2}} />
+                </div>
+                <div class="col-md-4" id="image2" style=" float:right;">
+                    <img class="aboutImg" src={{input_face2}} />
+                    <input type="file" id="file2" name="file2"   >
+                </div>
+
+                </div>
+                <div class="col-md-12 text-center educationHeader">
+                     <ul class="col-md-4" id="model2" name="model" style="list-style-type:none;float:left;">
+                    <li>Image 1 Resolution: &emsp;
+                      <select name="resolution1" id="resolution1" onclick="setCookie('resolution1',this.selectedIndex)">
+                    <option value="1">112x96</option>
+                    <option value="4">28x24</option>
+                    <option value="6">19x16</option>
+                    <option value="7">16x14</option>
+                    <option value="10">11x10</option>
+                    <!--<option value="12">9x7</option>-->
+                    </select>
+                    </li>
+                    </ul>
+                    <ul class="col-md-4" id="model" name="model" style="list-style-type:none;float:left;">
+                    <li>Network Model: &emsp;
+                      <select name="method" id="method" onclick="setCookie('method',this.selectedIndex)">
+                    <option value="1">Resnet</option>
+                    <option value="2">Alexnet</option>
+                    </select>
+                    </li>
+                    </ul>
+                    <ul class="col-md-4" id="model3" name="model" style="list-style-type:none;float:right;">
+                    <li>Image 2 Resolution: &emsp;
+                      <select name="resolution2" id="resolution2" onclick="setCookie('resolution2',this.selectedIndex)">
+                    <option value="1" >112x96</option>
+                    <option value="4">28x24</option>
+                    <option value="6">19x16</option>
+                    <option value="7">16x14</option>
+                    <option value="10">11x10</option>
+                    <!--<option value="12">9x7</option>-->
+                    </select>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div  style="text-align:center;">
+                <input id="submit-btn" type = "submit"  value="Upload" align="center"/>
+            </div>
+            <div  style="text-align:center;">
+                <h5>{{image_text}} </h5>
+                <h3>{{Result_test1}} </h3>
+                <h3 style="color:black"><b>{{Confidence1}}</b></h3>
+                <h3>{{Result_test2}} </h3>
+                <h3 style="color:black"><b>{{Confidence2}}</b></h3>
+            </div>
+            </form>
+        </div>
+    </div>
+
+<!---->
+    
+
+
+    <div class="copyrightSection">
+        <div class="col-md-12 text-center">
+            <p>&copy; Copyright Jiawei Tang 2019</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src="../static/js/jquery.superslides.min.js"></script>
+    <script src="../static/js/jquery.easypiechart.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
+</body>
+
+<script type="text/javascript">
+    function setCookie(name, value) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() + 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+    }
+    function getCookie(name)
+    {
+        var regExp = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        var arr = document.cookie.match(regExp);
+        if (arr == null) {
+            return null;
+        }
+        return unescape(arr[2]);
+    }
+</script>
+<script type="text/javascript">
+    var selectedIndex = getCookie("resolution1");
+    if(selectedIndex != null) {
+        document.getElementById("resolution1").selectedIndex = selectedIndex;
+    }
+</script>
+<script type="text/javascript">
+    var selectedIndex = getCookie("resolution2");
+    if(selectedIndex != null) {
+        document.getElementById("resolution2").selectedIndex = selectedIndex;
+    }
+</script>
+<script type="text/javascript">
+    var selectedIndex = getCookie("method");
+    if(selectedIndex != null) {
+        document.getElementById("method").selectedIndex = selectedIndex;
+    }
+</script>
+<script>
+document.getElementById('file').onchange = function() {
+    var imgFile = this.files[0];
+    var fr = new FileReader();
+    fr.onload = function() {
+        document.getElementById('image').getElementsByTagName('img')[0].src = fr.result;
+    };
+     fr.readAsDataURL(imgFile);
+};
+document.getElementById('file2').onchange = function() {
+    var imgFile = this.files[0];
+    var fr = new FileReader();
+    fr.onload = function() {
+        document.getElementById('image2').getElementsByTagName('img')[0].src = fr.result;
+    };
+    fr.readAsDataURL(imgFile);
+};
+</script>
+<script language="JavaScript">
+
+        function take_snapshot() {
+            Webcam.snap( function(data_uri) {
+                document.getElementById('cam_image').innerHTML = '<img id="image" src="'+data_uri+'"/>';
+                $('#snapsubmit').show();
+            } );
+        }
+
+        function startWebcam(){
+            var elem = document.getElementById("webcam");
+            $('#takeshot').show();
+            if (elem.textContent=="Start WebCam"){
+                Webcam.attach('#my_camera');
+                elem.textContent = "Stop WebCam";}
+            else{
+                Webcam.reset();
+                elem.textContent = "Start WebCam";
+            }
+        }
+
+        function upload() {
+            console.log("Uploading...")
+            var image = document.getElementById('image').src;
+            var form = document.getElementById('myForm');
+            var formData = new FormData(form);
+            formData.append("data", image);
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "/camresult",true);
+            // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // xmlhttp.setRequestHeader("Content-Type", "multipart/form-data");
+
+            // check when state changes,
+            xmlhttp.onreadystatechange = function() {
+                if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    // alert(xmlhttp.responseText);
+                    console.log(xmlhttp.responseText);
+                    window.location.href = xmlhttp.responseText;
+                    //  window.location.href = xmlhttp.responseURL
+                    // document.open();
+                    // document.write(http.responseText);
+                }
+                else{
+                    console.log('status' + xmlhttp.status);
+                }
+            }
+            xmlhttp.send(formData);
+
+            // console.log(formData.get('data'));
+        }
+
+    </script>
+</html>
